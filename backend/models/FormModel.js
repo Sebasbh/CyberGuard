@@ -5,7 +5,7 @@ const FormSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
+   /*  unique: true, */
     trim: true,
     lowercase: true,
     maxlength: 100, 
@@ -17,7 +17,7 @@ const FormSchema = new mongoose.Schema({
     trim: true,
     maxlength: 80, 
     validate: {
-      validator: (value) => /^[a-zA-Z]+$/.test(value), // Only letters allowed
+      validator: (value) => /^[a-zA-Z]+$/.test(value),
       message: 'Only letters are allowed for the name field.',
     },
   },

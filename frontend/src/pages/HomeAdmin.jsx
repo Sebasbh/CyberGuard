@@ -23,7 +23,7 @@ function HomeAdmin() {
       const userList = await getUsers();
       setUsers(userList);
     } catch (error) {
-      console.error("Error fetching users:", error);
+      alert("Error fetching users");
     }
   };
 
@@ -39,7 +39,7 @@ function HomeAdmin() {
         role: "user",
       });
     } catch (error) {
-      console.error("Error creating user:", error);
+      alert("Error creating user");
     }
   };
 
@@ -49,7 +49,7 @@ function HomeAdmin() {
       setUserForm(selectedUser);
       setSelectedUserId(userId);
     } catch (error) {
-      console.error("Error fetching user for edit:", error);
+      alert("Error fetching user for edit")
     }
   };
 
@@ -69,7 +69,7 @@ function HomeAdmin() {
         role: "user",
       });
     } catch (error) {
-      console.error("Error updating user:", error);
+      alert("Error updating user");
     }
   };
 
@@ -79,7 +79,7 @@ function HomeAdmin() {
       const updatedUsersList = users.filter((user) => user._id !== userId);
       setUsers(updatedUsersList);
     } catch (error) {
-      console.error("Error deleting user:", error);
+      alert("Error deleting user");
     }
   };
 

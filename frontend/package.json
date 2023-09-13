@@ -10,6 +10,7 @@
     "bootstrap": "^5.3.1",
     "crypto-browserify": "^3.12.0",
     "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^3.1.2",
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",

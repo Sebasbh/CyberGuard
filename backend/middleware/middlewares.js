@@ -37,7 +37,7 @@ export const generateToken = (req) => {
 
     return token;
   } catch (error) {
-    console.error(error);
+    console.error("Hubo error al generar el token");
   }
 };
 

@@ -94,7 +94,6 @@ export const loginUser = async (req, res, next) => {
     res.status(200).json({ token: newtoken })
   } catch (error) {
     // Maneja los errores
-    console.error(error);
     res.status(500).json({ mensaje: 'Error en el servidor' });
   }
 };

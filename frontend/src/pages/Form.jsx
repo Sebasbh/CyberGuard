@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import validator from "validator";
-import { submitForm } from "../context/Api.js"; // Importa la función submitForm de api.js
+import { submitForm } from "../context/Api.js"; 
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -15,24 +15,23 @@ function Form() {
 
   const [recaptchaValue, setRecaptchaValue] = useState(null); // Nuevo estado para almacenar el valor de reCAPTCHA
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData, res) => {
     // Verificar si los campos ocultos están llenos y, si es así, no realizar la petición
     if (formData.field1 || formData.field2) {
-      console.log("Campos ocultos llenos. La petición no se realizará.");
+      res.status(500).json({ error: 'Error interno del servidor' });
       return;
     }
 
     // Verifica si se completó reCAPTCHA antes de enviar el formulario
     if (!recaptchaValue) {
-      console.log("Debes completar reCAPTCHA antes de enviar el formulario.");
       return;
     }
 
     try {
       const response = await submitForm(formData); // Llama a la función submitForm
-      console.log("Respuesta del servidor:", response);
+      alert("formulario creado exitosamente")
     } catch (error) {
-      console.error("Error al enviar el formulario:", error);
+      alert("Error al enviar el formulario")
     }
   };
 

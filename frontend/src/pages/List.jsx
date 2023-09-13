@@ -10,7 +10,6 @@ function List() {
 
   useEffect(() => {
     const tokenFromlocalStorage = localStorage.getItem('token');
-    console.log(tokenFromlocalStorage)
     setAuthToken(tokenFromlocalStorage);
 
     const fetchData = async () => {
@@ -18,10 +17,8 @@ function List() {
         const data = await getFormList();
         setFormList(data);
         setError(null);
-        console.log(data);
       } catch (error) {
-        console.error('Error al obtener los datos de la API:', error);
-        setError('Hubo un error al cargar los datos. Por favor, inténtalo de nuevo más tarde.');
+        alert('Error al obtener los datos de la API');
       }
     };
 

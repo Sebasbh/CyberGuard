@@ -52,7 +52,7 @@ function ListFormsAdmin() {
       await deleteForm(formId);
       setFormList(formList.filter(form => form._id !== formId));
     } catch (error) {
-      setError("Error deleting the form.");
+    alert("Error deleting the form.");
     }
   };
 

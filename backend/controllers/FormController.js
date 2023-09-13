@@ -3,12 +3,12 @@ import Form from '../models/FormModel.js';
 // Controlador para crear un formulario de contacto
 export const createForm = async (req, res, next) => {
   try {
-    const existingForm = await Form.findOne({ email: req.body.email });
+   /*  const existingForm = await Form.findOne({ email: req.body.email });
 
     if (existingForm) {
       // A document with the same email already exists.
       return res.status(400).json({ error: 'Email already exists' });
-    }
+    } */
     const form = new Form(req.body);
     
     await form.save();
