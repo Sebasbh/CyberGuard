@@ -110,7 +110,7 @@ Esperamos que estas capturas y la demostración te den una idea de cómo funcion
 ## Agradecimientos
 Queremos expresar nuestro sincero agradecimiento a las siguientes personas y grupos por su valiosa contribución y apoyo en el proyecto "CyberGuard":
 - A nuestros profesores por su orientación, conocimientos y apoyo continuo durante el desarrollo del proyecto.
-- A nuestros compañeros de equipo y colaboradores por su dedicación y esfuerzo en la realización de este proyecto.
+- A nuestros compañeros y colaboradores por su dedicación y esfuerzo en la realización de este proyecto.
 - A la comunidad de desarrolladores y aportantes de código abierto que han inspirado y compartido recursos valiosos que enriquecieron nuestro aprendizaje y trabajo.
 
 ¡Gracias a todos por hacer posible "CyberGuard"!
