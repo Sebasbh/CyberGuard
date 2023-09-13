@@ -1,48 +1,33 @@
 # CyberGuard
 
 ## Descripción
-El proyecto "CyberGuard (Práctica de Desarrollo Seguro)" se centra en mejorar la seguridad en el envío de formularios en el sitio web `rovikron.web.app`. El proyecto se divide en dos principales componentes: el cliente y el servidor.
+El proyecto "CyberGuard (Práctica de Desarrollo Seguro)" se enfoca en mejorar la seguridad en el envío de formularios en el sitio web `rovikron.web.app`. El proyecto se divide en dos componentes principales: el cliente y el servidor.
 
-En el lado del cliente, se busca desarrollar un clon de la página de contacto utilizando React Js y aplicar medidas de seguridad, como la integración de ReCaptcha de Google, la implementación de campos ocultos para detectar bots y la validación de datos en el lado del cliente para garantizar que los campos tengan dimensiones y formatos correctos. También se presta atención a la protección contra ataques XSS y bots.
+En el lado del cliente, buscamos desarrollar un clon de la página de contacto utilizando React.js y aplicar medidas de seguridad, como la integración de ReCaptcha de Google, la implementación de campos ocultos para detectar bots y la validación de datos en el lado del cliente para garantizar que los campos tengan dimensiones y formatos correctos. También prestamos atención a la protección contra ataques XSS y bots.
 
-En el lado del servidor, se elige Node.js como tecnología, y se establecen requisitos para el almacenamiento seguro de datos de contacto, como la validación de campos contra ataques XSS y SQL Injection, así como la implementación de un middleware para prevenir ataques de fuerza bruta. Además, se crea un panel de administración con autenticación y roles de usuario, lo que permite la gestión de registros y usuarios.
+En el lado del servidor, elegimos Node.js como tecnología y establecemos requisitos para el almacenamiento seguro de datos de contacto. Esto incluye la validación de campos contra ataques XSS y SQL Injection, así como la implementación de un middleware para prevenir ataques de fuerza bruta. Además, creamos un panel de administración con autenticación y roles de usuario que permite la gestión de registros y usuarios.
 
 En resumen, el objetivo del proyecto es garantizar la seguridad en el manejo de formularios en el sitio web `rovikron.web.app` mediante la implementación de medidas de seguridad tanto en el lado del cliente como en el lado del servidor, utilizando tecnologías modernas y buenas prácticas de desarrollo seguro. La elección de las tecnologías específicas y la base de datos depende de las preferencias y requisitos del proyecto.
 
 ## Objetivos
-1. Desarrollar un clon de la página de contacto del sitio web `rovikron.web.app` utilizando React Js.
-
+1. Desarrollar un clon de la página de contacto del sitio web `rovikron.web.app` utilizando React.js.
 2. Mejorar la seguridad en el envío de formularios del sitio web, tanto en el lado del cliente como en el lado del servidor.
-
 3. Integrar ReCaptcha de Google en el formulario del lado del cliente para proteger contra bots y actividades maliciosas.
-
 4. Implementar campos ocultos en el formulario del lado del cliente para detectar posibles bots y prevenir el envío no autorizado de datos.
-
 5. Realizar una validación de datos en el lado del cliente para garantizar que los campos del formulario cumplan con dimensiones y formatos correctos, incluyendo requisitos específicos para campos como email, nombre, asunto y mensaje.
-
 6. Aplicar medidas de seguridad en el lado del cliente para protegerse contra ataques XSS (Cross-Site Scripting) y bots, incluyendo la validación y el escape de cadenas peligrosas.
-
 7. Utilizar Node.js como tecnología del lado del servidor para gestionar los datos de contacto de los usuarios.
-
 8. Almacenar de forma segura los datos de contacto en una base de datos, utilizando un ORM (Object-Relational Mapping) que permita una gestión eficiente.
-
 9. Validar los campos que provienen del formulario contra ataques XSS y SQL Injection (SQLi) para garantizar la seguridad de los datos almacenados.
-
 10. Implementar un middleware en la ruta del servidor para prevenir ataques de fuerza bruta, limitando el número de peticiones aceptadas por IP.
-
 11. Crear un panel de administración con autenticación y roles de usuario, diferenciando entre Administradores y Usuarios.
-
 12. Permitir a los Administradores realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) de usuarios desde el panel de administración.
-
 13. Permitir a los Usuarios visualizar los registros almacenados en la base de datos desde el panel de administración.
-
 14. Aplicar hashing a las contraseñas de los usuarios para garantizar su cifrado y seguridad.
-
 15. Implementar JSON Web Tokens (JWT) para el sistema de inicio de sesión, almacenando información relevante en los tokens, como el ID del usuario, el rol y la fecha de expiración.
-
 16. Garantizar la elección de tecnologías y base de datos específicas según las preferencias y requisitos del proyecto.
 
-## ¿Por qué es importante realizar este proyecto?
+## Por qué es importante realizar este proyecto
 **Seguridad del Usuario**: Mejorar la seguridad en el envío de formularios en un sitio web es fundamental para proteger a los usuarios. Los formularios suelen contener información sensible, como direcciones de correo electrónico y mensajes, y es esencial garantizar que esta información no sea comprometida por ataques maliciosos.
 
 **Protección contra Bots**: La integración de ReCaptcha y la implementación de campos ocultos para detectar bots ayudarán a prevenir el envío automatizado de formularios por parte de bots, lo que podría inundar el sistema con datos no deseados o maliciosos.
@@ -109,18 +94,18 @@ Para instalar y configurar un proyecto MERN (MongoDB, Express.js, React, Node.js
 ## Autor
 - **Nombre del Autor**: Sebastian Benavides Heins
 - **Correo Electrónico**: sebasheins@gmail.com
-- **Perfil de GitHub**: https://github.com/Sebasbh
-- **LinkedIn**: www.linkedin.com/in/sebastian-benavides-heins
+- **Perfil de GitHub**: [https://github.com/Sebasbh](https://github.com/Sebasbh)
+- **LinkedIn**: [www.linkedin.com/in/sebastian-benavides-heins](www.linkedin.com/in/sebastian-benavides-heins)
 
 ## Estado del Proyecto
-Está en desarrollo activo.
+El proyecto está en desarrollo activo.
 
 ## Capturas de Pantalla
 Aquí puedes ver algunas capturas de pantalla de la aplicación:
-- ![Captura de Pantalla 1](URL_de_la_imagen_1)
-- ![Captura de Pantalla 2](URL_de_la_imagen_2)
-- ![Captura de Pantalla 3](URL_de_la_imagen_3)
-¡Esperamos que estas capturas y la demostración te den una idea de cómo funciona "CyberGuard"!
+- ![Captura de Pantalla 1](./Fotos%20Readme/Screenshot%202023-09-13%20at%2018.46.49.png)
+- ![Captura de Pantalla 2](./Fotos%20Readme/Screenshot%202023-09-13%20at%2018.48.00.png)
+- ![Captura de Pantalla 3](./Fotos%20Readme/Screenshot%202023-09-13%20at%2018.48.50.png)
+Esperamos que estas capturas y la demostración te den una idea de cómo funciona "CyberGuard"!
 
 ## Agradecimientos
 Queremos expresar nuestro sincero agradecimiento a las siguientes personas y grupos por su valiosa contribución y apoyo en el proyecto "CyberGuard":
