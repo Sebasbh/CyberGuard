@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import FooterUser from "../components/footer/FooterUser";
 import HeaderUser from "../components/header/HeaderUser";
 import { createUser, getUserById, updateUser, deleteUser, getUsers, setAuthToken } from "../context/Api.js";
-import { Link } from "react-router-dom";
+import Navbar from "../components/header/Navbar";
 
 function HomeAdmin() {
   const [users, setUsers] = useState([]);
@@ -90,8 +90,8 @@ function HomeAdmin() {
   return (
     <div className="home-admin" >
       <HeaderUser />
+      <Navbar/>
       <div className="container mt-5" style={{ minHeight: "79vh" }}>
-      <Link to="/listformsadmin">forms</Link>
         <div className="row">
           <div className="col-md-6">
             <div className="card">

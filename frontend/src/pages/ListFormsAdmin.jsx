@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Nav, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import HeaderUser from '../components/header/HeaderUser.jsx';
 import FooterUser from '../components/footer/FooterUser.jsx';
 import { setAuthToken, getFormList, updateForm, deleteForm } from '../context/Api.js'; 
+import Navbar from '../components/header/Navbar.jsx';
 
 function ListFormsAdmin() {
   const [formList, setFormList] = useState([]);
@@ -59,17 +60,10 @@ function ListFormsAdmin() {
   return (
     <>
       <HeaderUser />
+      <Navbar/>
       <Container fluid className="my-5">
         <Row>
-          <Nav className="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-            <div className="position-sticky">
-              <Nav.Item>
-                <Nav.Link href="/homeadmin">Panel Admin</Nav.Link>
-              </Nav.Item>
-            </div>
-          </Nav>
-
-          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <main className="col-md-10 ms-sm-auto col-lg-10 px-md-4 mx-auto">
             <h1 className="mb-4">Lista de Formularios</h1>
             {loading ? (
               <p>Loading...</p>
@@ -79,7 +73,7 @@ function ListFormsAdmin() {
               <Row>
                 {formList.length > 0 ? (
                   formList.map((form) => (
-                    <Col key={form._id} lg={4} md={6} sm={12} className="mb-4">
+                    <Col key={form._id} lg={4} md={6} sm={12} className="mb-5">
                       <Card>
                         <Card.Body>
                           <Card.Title className="text-primary">{form.name}</Card.Title>

@@ -126,7 +126,7 @@ export const loginLimiter = rateLimit({
 });
 
 // Middleware de rate limit para una ruta API diferente
-export const apiLimiter = rateLimit({
+export const apiLimiter=  rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hora
   max: 100, // Número máximo de solicitudes a la API en el período de tiempo especificado
   message: apiMessage,

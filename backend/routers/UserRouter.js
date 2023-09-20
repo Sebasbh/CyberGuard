@@ -4,7 +4,7 @@ import { apiLimiter, authenticateTokenAndCheckUserRole, loginLimiter, requireAdm
 
 const UserRouter = express.Router();
 
-UserRouter.post('/login', /* loginLimiter, */ loginUser);
+UserRouter.post('/login', loginLimiter, loginUser);
 
 UserRouter.post('/', apiLimiter, authenticateTokenAndCheckUserRole, requireAdmin, createUser);
 

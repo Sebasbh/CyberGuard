@@ -1,7 +1,8 @@
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
-const baseURL = 'http://localhost:8000'; 
+/* const baseURL = 'http://localhost:8000';  */
+const baseURL = 'https://jh5z4qfg-8000.uks1.devtunnels.ms'; 
 
 export const setAuthToken = (token) => {
   if (token) {
@@ -134,3 +135,40 @@ export const getUsers = async () => {
 };
 
 
+
+export const getSecurityById = async (securityId) => {
+  try {
+    const response = await axios.get(`${baseURL}/security/${securityId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const updateSecurityLogById = async (securityId, updatedSecurityData) => {
+  try {
+    const response = await axios.put(`${baseURL}/security/${securityId}`, updatedSecurityData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deleteSecurityLogById = async (securityId) => {
+  try {
+    const response = await axios.delete(`${baseURL}/security/${securityId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+
+export const getAllSecurityLogs = async () => {
+  try {
+    const response = await axios.get(`${baseURL}/security`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};

@@ -17,11 +17,6 @@ const Header = () => {
             />
             <span className="brand-name">CyberGuard</span>
           </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/about" className="nav-link">
-              Sobre Nosotros
-            </Nav.Link>
-          </Nav>
         </div>
         <Nav>
           <a href="/login" className="login-button nav-link">
