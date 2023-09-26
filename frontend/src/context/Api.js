@@ -1,8 +1,8 @@
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 
-/* const baseURL = 'http://localhost:8000';  */
-const baseURL = 'https://jh5z4qfg-8000.uks1.devtunnels.ms'; 
+const baseURL = 'http://localhost:8000';
+
 
 export const setAuthToken = (token) => {
   if (token) {
@@ -28,16 +28,16 @@ export const login = async (formData, navigate, setError, setLoading) => {
 
     if (response.data.token) {
       localStorage.setItem("token", response.data.token);
-      setAuthToken(response.data.token); // Set the token in Axios headers
+      setAuthToken(response.data.token);
 
       // Decodificar el token para obtener el rol
       const decodedToken = jwt_decode(response.data.token);
       const userType = decodedToken.role;
 
       if (userType === "admin") {
-        navigate("/homeadmin"); // Redirige a la página de administrador
+        navigate("/homeadmin"); 
       } else {
-        navigate("/listforms"); // Redirige a la página para usuarios no administradores
+        navigate("/listforms");
       }
     } else {
       setError("No se recibió un token de acceso.");
@@ -172,3 +172,23 @@ export const getAllSecurityLogs = async () => {
     throw error;
   }
 };
+
+// Bloquear una IP por su ID en el cliente
+export const blockIPById = async (securityId) => {
+  try {
+    const response = await axios.put(`${baseURL}/security/block/${securityId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Desbloquear una IP por su ID en el cliente
+export const unblockIPById = async (securityId) => {
+  try {
+    const response = await axios.put(`${baseURL}/security/unblock/${securityId}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}

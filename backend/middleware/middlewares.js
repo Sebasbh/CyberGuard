@@ -11,19 +11,17 @@ const tokenExpirationTime = 3 * 60 * 60 * 1000;
 
 
 // Middleware para  encriptar la contraseña antes de guardar
-export async function encryptPasswordMiddleware(user, next) {
+export async function encryptPasswordMiddleware(user) {
   try {
     if (user.isModified('password')) {
       const salt = await bcrypt.genSalt(10);
       const hash = await bcrypt.hash(user.password, salt);
       user.password = hash;
     }
-    next();
   } catch (error) {
-    next(error); 
+    console.log(error);
   }
 }
-
 
 // Middleware para generar token
 export const generateToken = (req) => {

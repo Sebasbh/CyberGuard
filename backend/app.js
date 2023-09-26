@@ -1,20 +1,19 @@
 import express from 'express';
 import db from "./database/db.js";
 import cors from 'cors';
-
+import {createSecurityLogMiddleware} from "./middleware/securityMiddlewares.js"
 import FormRouter from './routers/FormRouter.js';
-import UserRouter from './routers/UserRouter.js';
-import SecurityRouter from './routers/SecurityRouter.js';
-import { createSecurityLogMiddleware } from './middleware/securityMiddlewares.js';
-
+import UserRouter from "./routers/UserRouter.js"
+import SecurityRouter from "./routers/SecurityRouter.js"
 const app = express();
-
+ 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
-app.set('trust proxy', true);
-app.use('/form', createSecurityLogMiddleware, FormRouter);
+/* app.set('trust proxy', true); */ 
+
+app.use('/form', /* checkIPBlocked, ¡*/createSecurityLogMiddleware, FormRouter);
 app.use('/user', createSecurityLogMiddleware, UserRouter);
 app.use('/security', SecurityRouter)
 

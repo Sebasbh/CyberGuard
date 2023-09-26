@@ -4,7 +4,7 @@ import { apiLimiter, authenticateTokenAndCheckUserRole,  formLimiter,  requireAd
 
 const FormRouter = express.Router();
 
-FormRouter.post('/', /* formLimiter, */ createForm);
+FormRouter.post('/',  formLimiter,  createForm);
 FormRouter.get('/', apiLimiter, authenticateTokenAndCheckUserRole, getForms); 
 FormRouter.get('/:id', apiLimiter, authenticateTokenAndCheckUserRole, requireAdmin , getFormById);
 FormRouter.put('/:id', apiLimiter, authenticateTokenAndCheckUserRole, requireAdmin, updateForm);

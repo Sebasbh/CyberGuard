@@ -50,7 +50,28 @@ const securityLogSchema = new mongoose.Schema({
     default: 0,  
     description: 'Indica si hubo un intento de ataque XSS',
   },
-  
+  isBlocked: {
+    type: Number,
+    enum: [0, 1],
+    default: false,
+    description: 'Indica si la IP está bloqueada',
+  },
+  infoApi: {
+    status: String,
+    country: String,
+    countryCode: String,
+    region: String,
+    regionName: String,
+    city: String,
+    zip: String,
+    lat: Number,
+    lon: Number,
+    timezone: String,
+    isp: String, 
+    org: String,
+    as: String,
+}
+
 });
 
 // Agregar índices para búsquedas eficientes
@@ -60,4 +81,3 @@ securityLogSchema.index({ ipAddress: 1, timestamp: -1 });
 const Security = mongoose.model('SecurityLog', securityLogSchema);
 
 export default Security;
- 

@@ -1,5 +1,5 @@
 import User from '../models/UserModel.js';
-import { generateToken } from '../middleware/middlewares.js'
+import { encryptPasswordMiddleware, generateToken } from '../middleware/middlewares.js'
 import bcrypt from 'bcrypt';
 
 // Controlador para crear un usuario
@@ -41,18 +41,48 @@ export const getUserById = async (req, res, next) => {
 };
 
 // Controlador para actualizar un usuario por ID
-export const updateUser = async (req, res, next) => {
+/* export const updateUser = async (req, res, next) => {
   try {
     const userId = req.params.id;
+    
+    const hashpasword = req.body.password
+      await encryptPasswordMiddleware(this, next);
+
     const updatedUser = await User.findByIdAndUpdate(userId, req.body, { new: true });
     res.status(200).json(updatedUser);
     if (!updatedUser) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
+
+
   } catch (error) {
-    next(error);
+    console.error(error)
+  }
+}; */
+export const updateUser = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const updatedData = req.body;
+    const user = new User(updatedData);
+
+    if (updatedData.password) {
+      await encryptPasswordMiddleware(user);
+    }
+    
+    const updatedUser = await User.findByIdAndUpdate(userId, user, { new: true });
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'Usuario no encontrado' });
+    }
+
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error interno del servidor' });
   }
 };
+
+
 
 // Controlador para eliminar un usuario por ID
 export const deleteUser = async (req, res, next) => {
