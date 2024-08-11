@@ -65,7 +65,7 @@ const userSchema = new mongoose.Schema({
     default: false,
   },
 });
-
+/* 
 userSchema.pre('save', async function (next) {
   try {
     await encryptPasswordMiddleware(this, next);
@@ -76,7 +76,7 @@ userSchema.pre('save', async function (next) {
 
 userSchema.methods.comparePassword = async function (candidatePassword) {
   return await bcrypt.compare(candidatePassword, this.password);
-};
+}; */
 
 userSchema.statics.findByUsername = function (username) {
   return this.findOne({ username });

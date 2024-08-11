@@ -38,12 +38,12 @@ const Main = () => {
         fluid
         className="d-flex flex-column justify-content-center align-items-center p-4"
       >
-{/*         <img
+      <img
           src="/assets/mainfoto.png"
           alt="Logo de CyberGuard"
           className="d-inline-block align-top"
           style={{ width: "80%", height: "400px" }}
-        /> */}
+        /> 
 
         <header className="text-center mb-4">
           <h1 className="display-4">Bienvenido a CyberGuard</h1>

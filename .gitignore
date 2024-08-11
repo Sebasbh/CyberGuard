@@ -1,4 +1,206 @@
-**/.DS_Store
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+*.log.*
+pids
+*.pid
+*.seed
+*.pid.lock
+*.gz
+
+# Dependency directories
+jspm_packages/
+typings/
+bower_components/
+
+# Testing
+coverage/
+.nyc_output/
+test/
+test-output/
+
+# Environment variables
 .env
-/cofig.js
-**/node_modules
+.env.*
+!.env.example
+
+# Webpack
+.cache/
+dist/
+build/
+.eslintcache
+
+# Sass/CSS
+.sass-cache/
+*.css.map
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.DS_Store?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.npm/
+.cache/
+.goutputstream-*
+.vim/
+.history
+*.swp
+*.bak
+
+# Dependency directories
+bin/
+lib/
+
+# Python
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.pytype/
+.tox/
+.coverage
+.hypothesis/
+.mypy_cache/
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# Flask
+instance/
+.webassets-cache
+__pycache__/
+*.py[cod]
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+*.class
+*.project
+*.classpath
+*.factorypath
+*.prefs
+
+# Ruby
+*.gem
+*.rbc
+/.config
+/.local
+.bundle/
+vendor/
+tmp/
+.sass-cache/
+.ruby-version
+.ruby-gemset
+.rvmrc
+
+# Go
+*.exe
+*.test
+vendor/
+*.exe
+*.dll
+*.so
+*.dylib
+*.cgo*
+
+# Rust
+/target/
+/Cargo.lock
+
+# Haskell
+dist/
+dist-newstyle/
+cabal-dev/
+.stack-work/
+**/.stack-work/
+
+# PHP
+vendor/
+composer.lock
+
+# Laravel
+/vendor/
+/node_modules/
+/public/hot
+/public/storage
+/storage/*.key
+.env.backup
+.env.testing
+/.vagrant
+
+# JetBrains
+*.iws
+.idea/
+.idea
+.idea/
+*.ipr
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Vim
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+
+# Other
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+.DS_Store

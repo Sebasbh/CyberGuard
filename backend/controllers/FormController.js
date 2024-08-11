@@ -24,7 +24,8 @@ export const createForm = async (req, res, next) => {
 // Controlador para obtener todos los formularios de contacto
 export const getForms = async (req, res, next) => {
   try {
-      const forms = await Form.find();
+      const forms = await Form.find();// esto hay que mejorarlo
+      
       res.status(200).json(forms);
   } catch (error) {
     next(error);
